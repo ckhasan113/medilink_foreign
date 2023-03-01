@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddDoctor">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:background="@drawable/background_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/amiko"
+                android:gravity="center"
+                android:text="Add Doctor"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="15"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/add_doctor_image_Btn"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="3dp"
+                    android:clickable="true"
+                    android:src="@drawable/add_user"
+                    android:scaleType="centerCrop"/>
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/doctor_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/write_text_5"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:gravity="center"
+                    android:hint="Doctor Name"
+                    android:includeFontPadding="true"
+                    android:inputType="textEmailAddress"
+                    android:padding="1dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorMain" />
+
+                <EditText
+                    android:id="@+id/registerNumber"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/write_text_5"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:gravity="center"
+                    android:hint="Registration number"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:padding="1dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorMain"
+                    />
+
+                <LinearLayout
+                    android:padding="1dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorMain"
+                    android:includeFontPadding="true"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/write_text_5"
+                    >
+
+                    <Spinner
+                        android:paddingLeft="16dp"
+                        android:paddingBottom="1dp"
+                        android:id="@+id/isp_degree"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center">
+                    </Spinner>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:padding="1dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorMain"
+                    android:includeFontPadding="true"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/write_text_5"
+                    >
+
+                    <Spinner
+                        android:paddingLeft="16dp"
+                        android:paddingBottom="1dp"
+                        android:id="@+id/isp_speciality"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/speciality_id"
+                        android:textAlignment="center">
+                    </Spinner>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dates"
+                        android:gravity="center"
+                        android:layout_weight="3"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dates"
+                        android:textColor="#fff"
+                        android:paddingTop="5dp"
+                        android:background="@drawable/write_text_4"/>
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/write_text_4"
+                        >
+                        <com.github.sundeepk.compactcalendarview.CompactCalendarView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:visibility="gone"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:id="@+id/selectDateCalender_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            app:compactCalendarTargetHeight="250dp"
+                            app:compactCalendarTextSize="12sp"
+                            app:compactCalendarBackgroundColor="#FFF"
+                            app:compactCalendarTextColor="#F44336"
+                            app:compactCalendarCurrentSelectedDayBackgroundColor="#4CAF50"
+                            app:compactCalendarCurrentDayBackgroundColor="#8F8888"
+                            app:compactCalendarMultiEventIndicatorColor="#4FBD54"
+                            app:compactCalendarEventIndicatorStyle="fill_large_indicator"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_weight="3"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:layout_marginLeft="8dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Saturday"-->
+<!--                        android:textColor="#fff"-->
+<!--                        android:paddingTop="5dp"/>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginLeft="8dp"-->
+<!--                        android:layout_marginRight="2dp"-->
+<!--                        android:background="@drawable/write_text_5"-->
+<!--                        >-->
+
+<!--                        <Spinner-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:paddingBottom="1dp"-->
+<!--                            android:id="@+id/isp_sat"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent">-->
+<!--                        </Spinner>-->
+
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--                -->
+<!--                <LinearLayout-->
+<!--                    android:layout_marginTop="24dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_weight="3"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:layout_marginLeft="8dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Sunday"-->
+<!--                        android:textColor="#fff"-->
+<!--                        android:paddingTop="5dp"/>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginLeft="8dp"-->
+
+<!--                        android:layout_marginRight="2dp"-->
+<!--                        android:background="@drawable/write_text_5"-->
+<!--                        >-->
+
+<!--                        <Spinner-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:paddingBottom="1dp"-->
+<!--                            android:id="@+id/isp_sun"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:entries="@array/t_f">-->
+<!--                        </Spinner>-->
+
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--                <LinearLayout-->
+<!--                    android:layout_marginTop="24dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_weight="3"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:layout_marginLeft="8dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Monday"-->
+<!--                        android:textColor="#fff"-->
+<!--                        android:paddingTop="5dp"/>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginLeft="8dp"-->
+
+<!--                        android:layout_marginRight="2dp"-->
+<!--                        android:background="@drawable/write_text_5"-->
+<!--                        >-->
+
+<!--                        <Spinner-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:paddingBottom="1dp"-->
+<!--                            android:id="@+id/isp_mon"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:entries="@array/t_f">-->
+<!--                        </Spinner>-->
+
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--                <LinearLayout-->
+<!--                    android:layout_marginTop="24dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_weight="3"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:layout_marginLeft="8dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Tuesday"-->
+<!--                        android:textColor="#fff"-->
+<!--                        android:paddingTop="5dp"/>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginLeft="8dp"-->
+
+<!--                        android:layout_marginRight="2dp"-->
+<!--                        android:background="@drawable/write_text_5"-->
+<!--                        >-->
+
+<!--                        <Spinner-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:paddingBottom="1dp"-->
+<!--                            android:id="@+id/isp_tue"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:entries="@array/t_f">-->
+<!--                        </Spinner>-->
+
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--                <LinearLayout-->
+<!--                    android:layout_marginTop="24dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_weight="3"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:layout_marginLeft="8dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Wednesday"-->
+<!--                        android:textColor="#fff"-->
+<!--                        android:paddingTop="5dp"/>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginLeft="8dp"-->
+
+<!--                        android:layout_marginRight="2dp"-->
+<!--                        android:background="@drawable/write_text_5"-->
+<!--                        >-->
+
+<!--                        <Spinner-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:paddingBottom="1dp"-->
+<!--                            android:id="@+id/isp_wed"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:entries="@array/t_f">-->
+<!--                        </Spinner>-->
+
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--                <LinearLayout-->
+<!--                    android:layout_marginTop="24dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_weight="3"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:layout_marginLeft="8dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Thursday"-->
+<!--                        android:textColor="#fff"-->
+<!--                        android:paddingTop="5dp"/>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginLeft="8dp"-->
+
+<!--                        android:layout_marginRight="2dp"-->
+<!--                        android:background="@drawable/write_text_5"-->
+<!--                        >-->
+
+<!--                        <Spinner-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:paddingBottom="1dp"-->
+<!--                            android:id="@+id/isp_thu"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:entries="@array/t_f">-->
+<!--                        </Spinner>-->
+
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--                <LinearLayout-->
+<!--                    android:layout_marginBottom="12dp"-->
+<!--                    android:layout_marginTop="24dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_weight="3"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:layout_marginLeft="8dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Friday"-->
+<!--                        android:textColor="#fff"-->
+<!--                        android:paddingTop="5dp"/>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginLeft="8dp"-->
+
+<!--                        android:layout_marginRight="2dp"-->
+<!--                        android:background="@drawable/write_text_5"-->
+<!--                        >-->
+
+<!--                        <Spinner-->
+<!--                            android:paddingLeft="16dp"-->
+<!--                            android:paddingBottom="1dp"-->
+<!--                            android:id="@+id/isp_fri"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:entries="@array/t_f">-->
+<!--                        </Spinner>-->
+
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+
+
+                <TextView
+                    android:id="@+id/start_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/write_text_5"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:gravity="center"
+                    android:text="Start time"
+                    android:textSize="18sp"
+                    android:includeFontPadding="true"
+                    android:padding="1dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorMain"
+                    />
+                <TextView
+                    android:id="@+id/end_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/write_text_5"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:gravity="center"
+                    android:text="End time"
+                    android:textSize="18sp"
+                    android:includeFontPadding="true"
+                    android:padding="1dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorMain"
+                    />
+
+                <EditText
+                    android:id="@+id/block"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/write_text_5"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:gravity="center"
+                    android:hint="Block"
+                    android:includeFontPadding="true"
+                    android:inputType="text"
+                    android:padding="1dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorMain"
+                    />
+
+                <EditText
+                    android:id="@+id/floor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/write_text_5"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:gravity="center"
+                    android:hint="Floor"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:padding="1dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorMain"
+                    />
+
+                <EditText
+                    android:id="@+id/room"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/write_text_5"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:gravity="center"
+                    android:hint="Room"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:padding="1dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorMain"
+                    />
+                <EditText
+                    android:id="@+id/patientCount"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/write_text_5"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:gravity="center"
+                    android:hint="Patient Count"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:padding="1dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorMain"
+                    />
+                <EditText
+                    android:id="@+id/fees"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/write_text_5"
+                    android:fontFamily="@font/amiko_semibold"
+                    android:gravity="center"
+                    android:hint="Fees"
+                    android:includeFontPadding="true"
+                    android:inputType="number"
+                    android:padding="1dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorMain"
+                    />
+
+
+                <Button
+                    android:id="@+id/add_new_doctor_info"
+                    android:text="Add doctor"
+                    android:textSize="24sp"
+                    android:textAllCaps="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/search_box"
+                    android:layout_marginBottom="70dp"
+                    android:padding="10dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

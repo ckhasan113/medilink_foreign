@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Foreign Doctor</string>
+
+    <string name="required_field">This field is required</string>
+
+    <string-array name="select_country">
+        <item>Select Country</item>
+        <item>India</item>
+        <item>Singapore</item>
+        <item>Malaysia</item>
+        <item>England</item>
+
+    </string-array>
+
+    <string-array name="degree">
+        <item>Degree</item>
+        <item>M.B.B.S</item>
+        <item>F.C.P.S</item>
+        <item>AFR.C.P.S</item>
+    </string-array>
+
+    <string-array name="true_false">
+        <item>True</item>
+        <item>False</item>
+    </string-array>
+
+    <string-array name="t_f">
+        <item>True</item>
+        <item>False</item>
+    </string-array>
+
+    <string-array name="speciality_id">
+        <item>Speciality</item>
+        <item>Anesthesiologist</item>
+        <item>Cardiology</item>
+        <item>Skin care</item>
+        <item>Neurologist</item>
+    </string-array>
+
+
+</resources>
